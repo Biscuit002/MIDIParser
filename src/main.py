@@ -1,6 +1,7 @@
 import mido
 from pathlib import Path
 
+#Access midifile from data folder
 midi_file = None
 midi_file_path = Path(__file__).parent.parent / 'data'
 for n in midi_file_path.iterdir():

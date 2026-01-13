@@ -13,6 +13,7 @@ for n in midi_file_path.iterdir():
 if midi_file is None:
     midi_file = 'cannot find midi file'
 
+#change to any variable to write on log
 logwrite = str(midi_file)
 
 

@@ -13,11 +13,11 @@ for n in midi_file_path.iterdir():
 if midi_file is None:
     midi_file = 'cannot find midi file'
 
-
+logwrite = str(midi_file)
 
 
 #create log file with timestamp
 log_path = Path(__file__).parent.parent / 'output'
 log = open(log_path / f'log_{datetime.now().strftime("%Y%m%d_%H%M%S")}.txt', 'w')
-log.write(str(midi_file))
+log.write(logwrite)
 log.close()

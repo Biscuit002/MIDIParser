@@ -33,7 +33,7 @@ for tracks in midi_file.tracks:
     json_file.append(track_data)
 
 #change to any variable to write on log
-logwrite = json.dumps(json_file, indent=2)
+logwrite = str(midi_file)
 
 #create log file with timestamp
 log_path = Path(__file__).parent.parent / 'output'

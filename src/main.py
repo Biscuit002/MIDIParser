@@ -25,15 +25,16 @@ for tracks in midi_file.tracks:
         if msg.type == 'track_name':
             track_data['instrument_name'] = msg.name
         if msg.type == 'time_signature':
-            time_signatures.append({'numerator': msg.numerator, 'denominator': msg.denominator})
+            time_signatures.append({'numerator': msg.numerator, 'denominator': msg.denominator, 'time': msg.time})
             track_data['time_signature'] = time_signatures
         if msg.type == 'key_signature':
-            key_signatures.append({'key': msg.key})
+            key_signatures.append({'key': msg.key, 'time': msg.time})
             track_data['key_signature'] = key_signatures
     json_file.append(track_data)
 
 #change to any variable to write on log
 logwrite = str(midi_file)
+logwrite = json.dumps(json_file, indent=2)
 
 #create log file with timestamp
 log_path = Path(__file__).parent.parent / 'output'

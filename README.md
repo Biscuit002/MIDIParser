@@ -4,5 +4,5 @@ Takes in .mid file as input and outputs a json structured log file with various 
 
 To use:
   1. Place .mid file in the 'data' folder.
-  2. Run the main.py script in the 'src' directory.
+  2. Run the main.py script in 'src'.
   3. Log outputs located in the 'output' folder
